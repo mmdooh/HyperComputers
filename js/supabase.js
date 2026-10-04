@@ -2,7 +2,7 @@
 export const CONFIG = {
   supabaseUrl: 'https://lmpxrbprqhgpaiteszhn.supabase.co',
   supabaseAnonKey: 'sb_publishable_oi9k6OGzZj8ok3bDfjQbUw_2_wqMdPQ',
-  whatsappNumber: '961718159444', // Country code + number, digits only, e.g. 96170123456.
+  whatsappNumber: '96171815944', // Country code + number, digits only, e.g. 96170123456.
 };
 
 let clientPromise;
