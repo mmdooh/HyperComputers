@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Catalog admin · Northline Computers</title><link rel="stylesheet" href="css/style.css"><script type="module" src="js/admin.js"></script></head>
+<body>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">N</span> Northline</a><a class="text-link" href="index.html">View catalog</a></div></header>
+  <main class="container admin-main">
+    <p id="admin-message" class="notice" role="status">Checking your session…</p>
+    <section id="login-section" class="login-panel" hidden><p class="eyebrow">SHOP MANAGEMENT</p><h1>Welcome back.</h1><p class="muted">Sign in to manage your laptop collection.</p><form id="login-form"><label>Email<input name="email" type="email" autocomplete="username" required></label><label>Password<input name="password" type="password" autocomplete="current-password" required></label><button class="button" type="submit">Sign in</button></form></section>
+    <section id="dashboard" hidden><div class="section-heading"><div><p class="eyebrow">SHOP MANAGEMENT</p><h1>Your laptops</h1></div><div class="actions"><button id="add-laptop" class="button">+ Add laptop</button><button id="logout" class="button secondary">Sign out</button></div></div><div id="admin-list" class="admin-list"></div></section>
+    <noscript><p class="notice">Please enable JavaScript to sign in.</p></noscript>
+  </main>
+  <dialog id="editor" aria-labelledby="editor-title"><button id="close-editor" class="close-button" aria-label="Close editor">×</button><h2 id="editor-title">Add laptop</h2><p id="form-message" role="status"></p><form id="laptop-form"><div class="form-grid">
+    <label>Brand<input name="brand" maxlength="100" required placeholder="Lenovo"></label><label>Model<input name="model" maxlength="150" required placeholder="ThinkPad T14"></label>
+    <label>CPU<input name="cpu" maxlength="200" required placeholder="Intel Core i7 · 11th Gen"></label><label>RAM<input name="ram" maxlength="100" required placeholder="16GB"></label>
+    <label>Storage<input name="storage" maxlength="100" required placeholder="512GB NVMe"></label><label>GPU<input name="gpu" maxlength="200" required placeholder="Intel Iris Xe"></label>
+    <label>Price (USD)<input name="price" type="number" min="0" max="99999999.99" step="0.01" required placeholder="350"></label><label>Status<select name="status"><option value="available">Available</option><option value="sold">Sold</option></select></label>
+    <label class="full">Laptop image<input name="image" type="file" accept="image/jpeg,image/png,image/webp"><span class="field-help">JPEG, PNG, or WebP, up to 5 MB. Leave empty to keep the current image.</span></label>
+    <label class="full">Description<textarea name="description" rows="4" maxlength="5000" placeholder="Condition, included accessories, and anything else a buyer should know."></textarea></label>
+  </div><div class="actions form-actions"><button class="button" type="submit">Save laptop</button><button id="cancel-editor" class="button secondary" type="button">Cancel</button></div></form></dialog>
+</body>
+</html>
