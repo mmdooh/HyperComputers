@@ -21,8 +21,27 @@
 .card-content{display:flex;flex-direction:column;flex:1}
 .card .specs{margin-bottom:auto}
 .card .price-row{flex-wrap:wrap}
-.image-wrap{background:linear-gradient(145deg,#f4f6f5,#eaf0ed)}
-.image-wrap img{padding:14px}
+/* Bound the grid cell so large source images cannot overflow the fixed area.
+   The Details image uses both .image-wrap and .detail-image. */
+.image-wrap{
+  background:linear-gradient(145deg,#f4f6f5,#eaf0ed);
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:minmax(0,1fr);
+  min-width:0;
+  flex-shrink:0;
+}
+.image-wrap img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  object-position:center;
+  padding:14px;
+}
 .card:has(.status.sold) .image-wrap img{opacity:.65}
 .button{min-height:48px;font-size:15px}
 .card .actions .secondary{flex:0 0 34%}
