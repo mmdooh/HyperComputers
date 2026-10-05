@@ -5,7 +5,11 @@ const message = document.querySelector('#catalog-message');
 const retry = document.querySelector('#retry');
 const dialog = document.querySelector('#details');
 document.querySelector('#close-details').addEventListener('click', () => dialog.close());
-dialog.addEventListener('click', event => { if (event.target === dialog && event.offsetX < 0) dialog.close(); });
+dialog.addEventListener('click', event => {
+  // Close only when the visitor taps outside the modal's bounds.
+  const bounds = dialog.getBoundingClientRect();
+  if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+});
 
 function showDetails(laptop) {
   const content = document.querySelector('#details-content');
