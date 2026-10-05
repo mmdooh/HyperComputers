@@ -4,18 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Find your next laptop. Browse our latest laptops, compare specifications, and contact us on WhatsApp.">
-  <title>Hyper Computers · Laptops</title>
+  <title>Hyper Hardware · Laptops</title>
   <link rel="stylesheet" href="css/style.css">
   <script type="module" src="js/app.js"></script>
 </head>
 <body>
-  <header class="site-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">H</span> Hyper<span class="brand-sub">COMPUTERS</span></a><span class="header-note">Good tech. Straightforward prices.</span></div></header>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="index.html" aria-label="Hyper Hardware home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M7 5v22M25 5v22M7 16h18" stroke="currentColor" stroke-width="5"/><path d="m18 4-6 13h7l-5 11" stroke="#8de0b5" stroke-width="3" stroke-linejoin="round"/></svg></span><span class="brand-wordmark">HYPER<span class="brand-sub">HARDWARE</span></span></a><span class="header-note">Good tech. Straightforward prices.</span></div></header>
   <main class="container">
-    <section class="intro"><p class="eyebrow">THE LAPTOP COLLECTION</p><h1>Your next laptop.<br><span>Ready for what’s next.</span></h1><p>For work, study, and everything in between.<br>Explore our laptops and talk to us on WhatsApp.</p></section>
+    <section class="intro"><p class="eyebrow">THE LAPTOP COLLECTION</p><h1>Your next laptop.<br><span>Find your fit.</span></h1><p>Explore the collection. Chat with us on WhatsApp.</p></section>
     <section aria-labelledby="catalog-title"><div class="section-heading"><h2 id="catalog-title">Explore laptops</h2><span id="catalog-count" class="muted"></span></div><p id="catalog-message" class="notice" role="status">Loading laptops…</p><button id="retry" class="button secondary" hidden>Try again</button><div id="catalog" class="catalog"></div></section>
     <noscript><p class="notice">Please enable JavaScript to view the laptop catalog.</p></noscript>
   </main>
-  <footer class="container footer"><span>Northline Computers</span><span>Find the right fit. Get in touch.</span></footer>
+  <footer class="container footer">
+    <div class="footer-shop"><strong>Hyper Hardware</strong><span>Visit our shop.</span></div>
+    <a class="button secondary location-link" href="https://maps.app.goo.gl/DPNPRKabPx34zEJC9" target="_blank" rel="noopener noreferrer" aria-label="Find Hyper Hardware on Google Maps (opens in a new tab)">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      Open in Google Maps
+    </a>
+  </footer>
   <dialog id="details" aria-labelledby="details-title"><button class="close-button" id="close-details" aria-label="Close laptop details">×</button><div id="details-content"></div></dialog>
 </body>
 </html>
