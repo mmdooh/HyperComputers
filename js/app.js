@@ -39,7 +39,10 @@ async function loadLaptops() {
   try {
     const client = await getClient();
     // Fetch on every page load; admin changes need no static-site redeploy.
-    const { data, error } = await client.from('laptops').select('*').order('created_at', { ascending: false });
+    // "available" sorts before "sold"; newest laptops come first in each group.
+    const { data, error } = await client.from('laptops').select('*')
+      .order('status', { ascending: true })
+      .order('created_at', { ascending: false });
     if (error) throw error;
     catalog.replaceChildren(...data.map(card));
     document.querySelector('#catalog-count').textContent = `${data.length} laptop${data.length === 1 ? '' : 's'}`;
